@@ -5,9 +5,51 @@
     */
 
     //ENTRADA
+    const numUm = Number ( prompt("Informe um numero").replace(`,`, `.`))
+    const numDois = Number ( prompt("Informe um numero").replace(`,`, `.`))
+    const numTres = Number ( prompt("Informe um numero").replace(`,`, `.`))
 
     
     //PROCESSAMENTO
+    if (numUm >= numDois && numUm >= numTres) 
+    {
+        if (numDois >= numTres) {
+        alert(` ${numUm}, ${numDois} e ${numTres}. nessa ordem`).replace(`.`, `,`)
+    }
+    else (numTres >= numDois) 
+    {
+    
+        alert(` ${numUm}, ${numTres} e ${numDois}. nessa ordem`).replace(`.`, `,`)
+    }
+    }
+
+
+    else if (numDois >= numUm && numDois >= numTres ) 
+    {  if (numTres >= numUm ) {
+        alert(` ${numDois}, ${numTres} e ${numUm} . nessa ordem`).replace(`.`, `,`)
+    }
+    else (numUm >= numTres )
+    {
+    
+    
+        alert(` ${numDois},${numUm} e ${numTres}. nessa ordem`).replace(`.`, `,`)
+    }
+}
+
+
+
+   else if (numTres >= numUm && numTres >= numDois ) 
+    { if (numUm >= numDois) {
+    
+        alert(`${numTres}, ${numUm} e ${numDois}. nessa ordem`).replace(`.`, `,`)}
+        else (numDois >= numUm) 
+        {
+            alert(`${numTres}, ${numDois} e ${numUm}. nessa ordem`).replace(`.`, `,`)
+        }
+    }
+   
+    
+ 
     
     //SAÍDA
     

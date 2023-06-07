@@ -8,10 +8,10 @@
 
     
     // processamento
-    const acrescimo = Math.ceil (0.25 * (notaDepois - notaAntes))
+    const acrescimo =  (0.25 * (notaDepois - notaAntes))
 
-    if (notaDepois >> notaAntes) 
-    {alert(`${ acrescimo} sera o bônus dado ao aluno ajudante`).toFixed(2)}
+    if (notaDepois > notaAntes) 
+    {alert(`${ acrescimo.toFixed(2).replace(".", ",")} sera o bônus dado ao aluno ajudante`)}
     else {
         alert(`nenhum acrésimo será dado`)
     }

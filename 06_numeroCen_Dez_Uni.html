@@ -18,22 +18,17 @@
     //PROCESSAMENTO
     let centenas = 0
     let dezenas = 0
+    let unidades = 0
     if (num > 0 && num < 1000) {
         centenas = Math.floor(num/100)
-        num = num%100
-        dezenas = Math.floor (num/10)
-        num = num%10
+        dezenas = Math.floor (num %100 /10)
+        unidades = num % 10
     
     }
     else{
         alert(`Valor Invalido!`)
     }
-    if (centenas > 0 && dezenas > 0 && num > 0 ) {
-        alert(`Tem ${centenas} centenas, ${dezenas} dezenas, ${num} unidades`)
-    }
-    else {
-        alert(`${centenas} centenas, ${dezenas} dezenas e ${num} unidade`)
-    }
+    
     
 
     

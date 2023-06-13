@@ -8,12 +8,50 @@
     */
 
     //ENTRADA
+    const num1 = Number(prompt("informe um numero").toreplace(",", "."))
+    const num2 = Number(prompt("informe outro numero").toreplace(",", "."))
+    const conta = prompt("diga uma operação matemática que deseja usar: + (Adição), - (Subtração), * (Multiplicação) ou / (Divisão).").trim().toLowerCase()
 
 
     //PROCESSAMENTO
-
-    
+    let mensagem = "O resultado da operação é "
+    if (conta === "+") {
+        let mais = num1 + num2
+    }
+    else if (conta === "-") {
+        let menos = num1 - num2
+    }
+    else if (conta ==="*") {
+        let multi = num1 * num2
+    }
+    else if (conta === "/") {
+        let divi = num1 / num2
+    }
+    else {
+        alert("Informação Inválida!")
+    }
+    let info = ""
+    if (conta%2==0 ) {
+        info += `esse numero é par`
+    }
+    else {
+        info += `esse número é impar`
+    }
+    if (conta >= 0) {
+        info += `, positivo`
+    }
+    else {
+        info += `, negativo`
+    }
+    if (Number.isInteger(conta)) {
+        info += ` e inteiro`
+    }
+    else {
+        info += ` e decimal`
+    }
+   
     //SAÍDA
+    alert(mensagem)
 
 
 </script>

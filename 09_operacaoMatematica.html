@@ -8,50 +8,55 @@
     */
 
     //ENTRADA
-    const num1 = Number(prompt("informe um numero").toreplace(",", "."))
-    const num2 = Number(prompt("informe outro numero").toreplace(",", "."))
-    const conta = prompt("diga uma operação matemática que deseja usar: + (Adição), - (Subtração), * (Multiplicação) ou / (Divisão).").trim().toLowerCase()
+    const num1 = Number(prompt("informe um numero").replace(",", "."))
+    const num2 = Number(prompt("informe outro numero").replace(",", "."))
+    const conta = prompt("diga uma operação matemática que deseja usar: + (Adição), - (Subtração), * (Multiplicação) ou / (Divisão).").trim()
 
 
     //PROCESSAMENTO
     let mensagem = "O resultado da operação é "
+    let resultado = 0
     if (conta === "+") {
-        let mais = num1 + num2
+        resultado = num1 + num2
     }
     else if (conta === "-") {
-        let menos = num1 - num2
+        resultado = num1 - num2
     }
-    else if (conta ==="*") {
-        let multi = num1 * num2
+    else if (conta === "*") {
+        resultado = num1 * num2
     }
     else if (conta === "/") {
-        let divi = num1 / num2
+        resultado = num1 / num2
     }
     else {
         alert("Informação Inválida!")
     }
-    let info = ""
-    if (conta%2==0 ) {
-        info += `esse numero é par`
+    var info = ""
+    if (Number(resultado % 2 == 0)) {
+        info += `Esse numero é par`
     }
     else {
-        info += `esse número é impar`
+        info += `Esse número é impar`
     }
-    if (conta >= 0) {
+    if (resultado >= 0) {
         info += `, positivo`
     }
-    else {
+    else if (resultado<0){
         info += `, negativo`
     }
-    if (Number.isInteger(conta)) {
+    else {
+        info += `, neutro`
+    }
+    if (Number.isInteger(resultado)) {
         info += ` e inteiro`
     }
     else {
         info += ` e decimal`
     }
-   
+
     //SAÍDA
-    alert(mensagem)
+    alert(mensagem + resultado)
+    alert(info)
 
 
 </script>

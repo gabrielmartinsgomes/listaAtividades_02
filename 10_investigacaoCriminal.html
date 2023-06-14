@@ -11,9 +11,57 @@
     */
 
     //ENTRADA
+    const ligar = prompt("Telefonou para a vítima?").toLowerCase()
+    const local = prompt ("Esteve no local do crime?").toLowerCase()
+    const morar = prompt ("Mora perto da vítima?").toLowerCase()
+    const dever = prompt ("Devia para a vítima?").toLowerCase()
+    const trabalhar = prompt ("Já trabalhou com a vítima?").toLowerCase()
 
     //PROCESSAMENTO
+    var provas = 0
+    if (ligar === "sim") {
+        provas++
+
+    }
+    
+    
+    if (local === "sim") {
+        provas++
+    }
+    
+    
+    if (morar === "sim") {
+        provas++
+    }
+   
+    
+    if (dever === "sim") {
+        provas++
+    }
+ 
+    
+    if (trabalhar === "sim") {
+        provas++
+    }
+
+    var classificado = " "
+   
 
     //SAÍDA
+ if (provas === 5) {
+        classificado = "Assasino"
+ }
+   
+    else if (provas >=3 && provas < 5) {
+        classificado = "Cúmplice"
+    }
+    else if (provas === 2) {
+        classificado = "Suspeito"
+    }
+ 
+    else {
+        classificado = "Você esta livre"
+    }
+    alert(`Classsificação: ` + classificado)
 
 </script>

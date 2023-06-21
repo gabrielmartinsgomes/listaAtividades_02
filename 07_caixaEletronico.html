@@ -6,7 +6,7 @@
     Exemplo: Para sacar a quantia de 399 reais, o script fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
     */
 
-    let saque = Number(prompt(`Qual a quantia que deseja sacar?`));
+    let saque = Number(prompt(`Qual a quantia que deseja sacar?`).replace(",", "."));
 
     let mensagemFinal = `Para sacar a quantia de ${saque.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}, o script fornece `;
 
